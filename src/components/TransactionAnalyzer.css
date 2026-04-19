@@ -1,0 +1,326 @@
+.analyzer-section {
+  padding: 28px;
+}
+
+.analyzer-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.analyzer-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(239, 68, 68, 0.15) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.analyzer-icon {
+  font-size: 22px;
+  color: #f59e0b;
+}
+
+.analyzer-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.analyzer-header .text-muted {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Example chips */
+.example-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.chips-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.example-chip {
+  padding: 6px 14px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+
+.example-chip:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-accent);
+  color: var(--text-accent);
+  transform: translateY(-1px);
+}
+
+/* Input area */
+.analyzer-input-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 4px;
+}
+
+.analyzer-input-wrap .input-field {
+  flex: 1;
+  min-height: 52px;
+  resize: none;
+}
+
+.analyze-btn {
+  flex-shrink: 0;
+  height: 52px;
+}
+
+/* Results */
+.analysis-result {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.result-risk-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.result-type-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Result cards */
+.result-card {
+  padding: 18px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.result-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.result-explanation {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+/* Risk-specific card styles */
+.result-risk-card.risk-safe {
+  border-color: var(--safe-border);
+  background: var(--safe-bg);
+}
+
+.result-risk-card.risk-safe .result-card-header {
+  color: var(--safe);
+}
+
+.result-risk-card.risk-warning {
+  border-color: var(--warning-border);
+  background: var(--warning-bg);
+}
+
+.result-risk-card.risk-warning .result-card-header {
+  color: var(--warning);
+}
+
+.result-risk-card.risk-danger {
+  border-color: var(--danger-border);
+  background: var(--danger-bg);
+}
+
+.result-risk-card.risk-danger .result-card-header {
+  color: var(--danger);
+}
+
+/* AI card */
+.result-ai-card {
+  border-color: var(--border-accent);
+  background: var(--accent-gradient-subtle);
+}
+
+.result-ai-card .result-card-header {
+  color: var(--accent-primary-light);
+}
+
+.ai-icon {
+  color: var(--accent-primary-light);
+}
+
+/* Tips */
+.result-tips {
+  padding: 18px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.result-tips h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.result-tips ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-tips li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.result-tips li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary-light);
+  font-weight: 700;
+}
+
+/* ============================================
+   Risk Score Meter
+   ============================================ */
+
+.risk-meter-wrap {
+  padding: 16px 18px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.risk-meter-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.meter-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.meter-label.safe { color: var(--safe); }
+.meter-label.warning { color: var(--warning); }
+.meter-label.danger { color: var(--danger); }
+
+.risk-meter-track {
+  position: relative;
+  height: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,
+    #10b981 0%,
+    #22c55e 20%,
+    #eab308 45%,
+    #f59e0b 60%,
+    #ef4444 80%,
+    #dc2626 100%
+  );
+  overflow: visible;
+}
+
+.risk-meter-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10px;
+  background: transparent;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.risk-meter-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid rgba(99, 102, 241, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.marker-score {
+  position: absolute;
+  top: -28px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.risk-meter-range {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 640px) {
+  .analyzer-section {
+    padding: 20px;
+  }
+
+  .analyzer-input-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .analyze-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
