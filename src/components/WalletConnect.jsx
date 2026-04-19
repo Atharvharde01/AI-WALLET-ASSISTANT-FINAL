@@ -140,9 +140,11 @@ export default function WalletConnect({ wallet, setWallet }) {
           </div>
 
           <div className="wallet-actions">
-            <button className="btn btn-secondary btn-sm" onClick={handleSwitchNetwork} disabled={loading}>
-              <FiZap /> Switch to HeLa
-            </button>
+            {wallet.chainId !== 666888 && (
+              <button className="btn btn-secondary btn-sm" onClick={handleSwitchNetwork} disabled={loading}>
+                <FiZap /> Switch to HeLa
+              </button>
+            )}
             <button className="btn btn-danger btn-sm" onClick={handleDisconnect}>
               Disconnect
             </button>

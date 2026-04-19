@@ -17,7 +17,7 @@ export const HELA_NETWORK = {
 };
 
 export const HELA_TESTNET = {
-  chainId: '0x6600', // 26112 in hex  
+  chainId: '0xa2d08', // 666888 in hex  
   chainName: 'HeLa Testnet',
   nativeCurrency: {
     name: 'HELA',
